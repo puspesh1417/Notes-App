@@ -43,7 +43,7 @@ function showNotes() {
         <div class="note">
             <p class="note-counter">Note ${index + 1}</p>
             <h3 class="note-title"> ${element.title} </h3>
-            <p class="note-text"> ${element.text}</p>
+            <p2 class="note-text"> ${element.text}</p2>
             <button id="${index}"onclick="deleteNote(this.id)" class="note-btn">Delete Note</button>
             <button id="${index}"onclick="editNote(this.id)" class="note-btn edit-btn">Edit Note</button>
         </div>
@@ -112,7 +112,7 @@ search.addEventListener("input", function(){
      let noteCards = document.getElementsByClassName('note');
      Array.from(noteCards).forEach(function(element){
         let cardTxt = element.getElementsByTagName("h3")[0].innerText;
-        let cardTxt1 = element.getElementsByTagName("p")[0].innerText;
+        let cardTxt1 = element.getElementsByTagName("p2")[0].innerText;
         console.log(cardTxt1)
         // console.log(cardTxt)
         if(cardTxt.includes(inputVal)||cardTxt1.includes(inputVal)){
