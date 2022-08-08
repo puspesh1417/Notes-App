@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1935d064dd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+
+<body>
+    <input id="searchTxt" type="search" placeholder="Type Here to search Saved Notes text" aria-label="Search">
+
+
+
+    <header>
+        <div class="container">
+            <h1>My Notes App</h1>
+            <form action="">
+                <input type="text" id="note-title" placeholder="Note title">
+                <textarea id="note-text" placeholder="Note Details"></textarea>
+
+                <button id="add-btn">Add Note</button>
+            </form>
+        </div>
+    </header>
+
+    <section>
+        <div class="container" id="rtr">
+            <h2>Saved Notes</h2>
+            <hr>
+            <div id="notes">
+
+                <div class="note" id="rfr">
+                    <p class="note-counter"><u>Note ${index + 1}</u></p>
+                    <h3 class="note-title"> $element.title </h3>
+                    <p class="note-text"> $element.text</p>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container1">
+
+            <footer>
+                <p2>&copy; 2022 PuspeshmyNote.com</p2>
+            </footer>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

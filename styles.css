@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+:root {
+    --white: #fff;
+    --black: #1c2b2d;
+    --blue: #31326f;
+    --color-primary: #9d0191;
+    --color-sec: #db6400;
+    --color-grey: #eee;
+    --color-dark-grey: #222831;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eee;
+}
+
+
+.p-small {
+    padding-bottom: 5px;
+}
+.p-medium {
+    padding-bottom: 10px;
+}
+.p-y {
+    padding: 10px 0;
+}
+.m-y {
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #191719;
+    line-height: 2;
+    margin: 0px 66px;
+}
+
+header form {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+}
+
+form > * {
+    margin-bottom: 13px;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 8px;
+    border: 1px solid #777;
+    border-radius: 14px;
+}
+
+form textarea {
+    padding: 7px 0 40px 5px;
+    font-size: 1.2rem;
+    font-family: inherit;
+}
+
+::placeholder {
+    font-size: 1rem;
+}
+
+form button {
+    background-color: var(--color-sec);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+form button:hover {
+    background-color: green;
+}
+
+.note {
+    padding: 1rem;
+    /* border: 1px solid #777; */
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 1rem 0;
+
+}
+
+.note-counter
+ {
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.note-title {
+    font-size: 1.5rem;
+    color: rgb(83, 0, 218);
+}
+
+.note-btn {
+    padding: 7px;
+    margin-top: 5px;
+    font-size: 1rem;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: rgb(51, 47, 47);
+}
+.container1{
+    margin-top: 42vh;
+    /* position: absolute; */
+  
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(38, 5, 129);
+    
+}
+
+
+
+#searchTxt {
+    height: 50px;
+    width: 255px;
+    margin: 10px;
+    border: 3px solid blue;
+    border-radius: 5px solid var(--blue);
+    font-size: 15px;
+}
