@@ -93,10 +93,13 @@ function editNote(index) {
     }
     console.log(notesObj);
 
-    notesObj.findIndex((element, index) => {
-      addTitle.value = element.title;
-      addTxt.value = element.text;
-    })
+//     notesObj.findIndex((element, index) => {
+//       addTitle.value = element.title;
+//       addTxt.value = element.text;
+//     })
+  addTitle.value=notesObj[index].title;
+    addTxt.value=notesObj[index].text;
+
     notesObj.splice(index, 1);
         localStorage.setItem("notes", JSON.stringify(notesObj));
         showNotes();
