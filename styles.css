@@ -112,12 +112,12 @@ form button:hover {
     text-decoration: underline;
 }
 
-.note-title {
+/* .note-title {
     font-size: 1.5rem;
     color: rgb(83, 0, 218);
-}
+} */
 
-.note-btn {
+/* .note-btn {
     padding: 7px;
     margin-top: 5px;
     font-size: 1rem;
@@ -127,20 +127,20 @@ form button:hover {
     border-radius: 3px;
     outline: none;
     cursor: pointer;
-}
+} */
 
-.edit-btn {
+/* .edit-btn {
     background-color: rgb(51, 47, 47);
 }
 .container1{
     margin-top: 42vh;
     /* position: absolute; */
   
-    text-align: center;
+    /* text-align: center;
     font-size: 1.5rem;
     color: rgb(38, 5, 129);
     
-}
+} */ */
 
 
 
@@ -151,4 +151,28 @@ form button:hover {
     border: 3px solid blue;
     border-radius: 5px solid var(--blue);
     font-size: 15px;
+}
+.stick{  
+    /* position: sticky;   */
+    top:50px;  
+    padding: 10px;  
+  
+   }  
+   .row {
+    color: red;
+    font-size: 25px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+header h1 {
+    font-size: 2.5rem;
+    color: #914f56;
+    line-height: 2;
+    margin: 0px 66px;
 }
