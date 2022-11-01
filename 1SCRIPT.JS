@@ -18,8 +18,9 @@ addBtn.addEventListener("click", function(e) {
     notesObj = JSON.parse(notes);
   }
   let myObj = {
-    title: addTitle.value,
-    text: addTxt.value
+    title: addTitle.value, 
+    text: addTxt.value,
+    createdat:new Date(),
   }
   notesObj.push(myObj);
   localStorage.setItem("notes", JSON.stringify(notesObj));
@@ -40,14 +41,17 @@ function showNotes() {
   let html = "";
   notesObj.forEach(function(element, index) {
     html += `
-        <div class="note">
-            <p class="note-counter">Note ${index + 1}</p>
-            <h3 class="note-title"> ${element.title} </h3>
-            <p2 class="note-text"> ${element.text}</p2>
-            <button id="${index}"onclick="deleteNote(this.id)" class="note-btn">Delete Note</button>
-            <button id="${index}"onclick="editNote(this.id)" class="note-btn edit-btn">Edit Note</button>
+    <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
+    <div class="card-body">
+    <p2 class="note-counter" style="color:red"><u>Note ${index + 1}</u></p2>
+        <h6 class="card-title" style="color:blue">${element.title}</h6>
+      
+        <p class="card-text" style="color:black"> ${element.text}</p>
+        <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-danger">Delete Note</button>
+        <button id="${index}"onclick="editNote(this.id)" class="btn btn-primary">Edit Note</button>
         </div>
-            `;
+</div>`;
+            
   });
   let notesElm = document.getElementById("notes");
   if (notesObj.length != 0) {
@@ -100,22 +104,22 @@ function editNote(index) {
   addTitle.value=notesObj[index].title;
     addTxt.value=notesObj[index].text;
 
-    notesObj.splice(index, 1);
+    notesObj.splice(index,1);
         localStorage.setItem("notes", JSON.stringify(notesObj));
         showNotes();
 }
 
-
+/// search functionality
 showNotes();
 let search = document.getElementById('searchTxt');
 search.addEventListener("input", function(){
     let inputVal = search.value.toLowerCase();
 //    console.log(inputVal)
 
-     let noteCards = document.getElementsByClassName('note');
+     let noteCards = document.getElementsByClassName('noteCard');
      Array.from(noteCards).forEach(function(element){
-        let cardTxt = element.getElementsByTagName("h3")[0].innerText;
-        let cardTxt1 = element.getElementsByTagName("p2")[0].innerText;
+        let cardTxt = element.getElementsByTagName("h6")[0].innerText;
+        let cardTxt1 = element.getElementsByTagName("p")[0].innerText;
         console.log(cardTxt1)
         // console.log(cardTxt)
         if(cardTxt.includes(inputVal)||cardTxt1.includes(inputVal)){
@@ -129,3 +133,6 @@ search.addEventListener("input", function(){
         }
     })
 })
+
+
+// Add note to local storage
